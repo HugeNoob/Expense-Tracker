@@ -1,6 +1,6 @@
 # Expense-Tracker
 
-First experience with full-stack development. Built an expense tracker with the MERN (MongoDB, Express, React, Node) stack.  
+My first experience with full-stack web development. Built an expense tracker with the MERN (MongoDB, Express, React, Node) stack. I used axios for http requests and Context API + useReducer hooks for state management.  
 
 
 Some component templates from MUI:  
