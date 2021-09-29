@@ -7,7 +7,7 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import { AuthContext } from '../context/GlobalState'
 import { ErrorContext } from '../context/GlobalState'
 import Alert from '@mui/material/Alert';
-
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     textfields: {
@@ -182,21 +182,30 @@ const Register = (props) => {
 const LoginRegister = (props) => {
     
     return (
-        <div style={{position: 'absolute', left: 740, top: 20}}>
-            <Typography style={{color: 'white', marginLeft: 0, marginTop: 30}}>
-                <h2>Expense Tracker</h2>
-            </Typography>
-            <div >
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}
+        >
+            <Grid item xs={3}>
+                <Typography style={{color: 'white'}}>
+                    <h2>Expense Tracker</h2>
+                </Typography>
+                <div >
 
-                <Paper elevation={3} style={{backgroundColor: '#494952', width: 400, height: 750}}>
+                    <Paper elevation={3} style={{backgroundColor: '#494952', width: 400, height: 750}}>
 
-                    <Login />
-                    <Divider style={{marginTop: 80}} />
-                    <Register />
+                        <Login />
+                        <Divider style={{marginTop: 80}} />
+                        <Register />
 
-                </Paper>
-            </div>
-        </div>
+                    </Paper>
+                </div>
+            </Grid>
+        </Grid>
     )
 }
 
