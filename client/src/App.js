@@ -123,7 +123,7 @@ function App() {
   });
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const { authstate, user, loadUser, logoutUser } = useContext(AuthContext);
+  const { user, loadUser, logoutUser, token } = useContext(AuthContext);
 
   useEffect(() => {
     loadUser();
@@ -144,7 +144,7 @@ function App() {
 
   return (
     <Router>
-      {authstate !== true ? <LoginRegister /> : <div className='container' >
+      {token === null ? <LoginRegister /> : <div className='container' >
         <MuiThemeProvider theme={THEME}>
 
             {/* App Outline */}

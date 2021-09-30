@@ -153,7 +153,9 @@ export default function TransactionTable() {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    getTransactions({ userid: user._id })
+    if(user !== null){
+      getTransactions({ userid: user._id })
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

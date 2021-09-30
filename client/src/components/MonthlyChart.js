@@ -131,7 +131,9 @@ export default function MonthlyChart() {
   const { transactions, getTransactions } = useContext(GlobalContext)
 
   useEffect(() => {
-    getTransactions({ userid: user._id })
+    if(user !== null){
+      getTransactions({ userid: user._id })
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

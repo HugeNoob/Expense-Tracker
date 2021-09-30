@@ -235,6 +235,7 @@ export const GlobalProvider = ({ children }) => {
             authstate: authstate.isAuthenticated,
             user: authstate.user,
             isLoading: authstate.isLoading,
+            token: authstate.token,
             loadUser,
             registerUser,
             logoutUser,

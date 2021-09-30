@@ -18,7 +18,9 @@ export default function YearlyChart(){
     const { user } = useContext(AuthContext)
     
     useEffect(() => {
+    if(user !== null){
       getTransactions({ userid: user._id })
+    }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
