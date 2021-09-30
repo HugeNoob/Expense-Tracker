@@ -293,7 +293,7 @@ export default function MonthlyChart() {
             <h2 style={{ paddingLeft: 30, color: 'white'}}>{getMonthName(month)}'s outlook</h2>
           </Typography>
 
-          <PieChart width={550} height={300} style={{paddingLeft: 200}}>
+          <PieChart width={550} height={300} style={{paddingLeft: 165}}>
             <Pie
               activeIndex={activeIndex}
               activeShape={RenderActiveShape}
