@@ -135,7 +135,7 @@ export default function MonthlyChart() {
       getTransactions({ userid: user._id })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [user])
 
   const getMonthName = (monthstr) => {
     switch (monthstr) {

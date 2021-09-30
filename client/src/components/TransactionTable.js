@@ -157,7 +157,7 @@ export default function TransactionTable() {
       getTransactions({ userid: user._id })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [user])
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';

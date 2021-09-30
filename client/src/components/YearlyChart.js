@@ -22,7 +22,7 @@ export default function YearlyChart(){
       getTransactions({ userid: user._id })
     }
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [user])
 
     const filterTransactionsYear = (allTransactions) => {
       return allTransactions.filter(transaction => transaction.date.slice(6, 10) === curryearstr)
