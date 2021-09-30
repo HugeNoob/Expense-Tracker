@@ -26,6 +26,7 @@ import { AuthContext } from './context/GlobalState';
 import LoginRegister from './components/LoginRegister';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Grid } from '@material-ui/core';
 
 const drawerWidth = 200;
 
@@ -51,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   menuButton: {
-    marginRight: 36,
+    left: -7,
+    marginRight: 20,
     color: '#ffffff'
   },
   hide: {
@@ -144,7 +146,7 @@ function App() {
 
   return (
     <Router>
-      {token === null ? <LoginRegister /> : <div className='container' >
+      {token === null ? <LoginRegister /> : <div>
         <MuiThemeProvider theme={THEME}>
 
             {/* App Outline */}
@@ -171,25 +173,25 @@ function App() {
                     <MenuIcon />
                   </IconButton>
 
-                  <div style={{
+                  <Grid container style={{
                       display: 'flex',
                       alignItems: 'center',
-                      flexWrap: 'wrap',
+                      flexWrap: 'nowrap',
                     }}>
                       <Typography variant="h6">
                         Expense Tracker 
                       </Typography>
                       <MonetizationOnIcon className={classes.moneyicon}/>
-                  </div> 
+                  </Grid> 
 
-                  <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', position: 'relative', left: 1500}}> 
-                    <AccountCircleIcon />
-                    <Typography style={{marginLeft: 10}}>
-                      {user !== null ? user.name : ''}
-                    </Typography>
-
-                  </div>
-
+                  <Grid container justify='flex-end'>
+                    <IconButton disabled style={{color: 'white'}}> 
+                      <AccountCircleIcon />
+                      <Typography style={{marginLeft: 5}}>
+                        {user !== null ? user.name : ''}
+                      </Typography>
+                    </IconButton>
+                  </Grid>
 
                 </Toolbar>
 
